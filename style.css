@@ -1,15 +1,14 @@
+/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos globais */
 html, body {
     height: 100%;
     margin: 0;
-}
-
-body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     background-color: #ffffff;
@@ -18,6 +17,7 @@ body {
     flex-direction: column;
 }
 
+/* Estilos do cabeçalho */
 header {
     background-color: #333333;
     color: #ffffff;
@@ -25,6 +25,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos da navegação */
 nav ul {
     list-style: none;
     text-align: center;
@@ -46,11 +47,13 @@ nav ul li a:hover {
     color: #ff0000;
 }
 
+/* Estilos do conteúdo principal */
 main {
     flex: 1;
     padding: 2rem;
 }
 
+/* Estilos do rodapé */
 footer {
     background-color: #333333;
     color: #ffffff;
@@ -63,7 +66,7 @@ footer p {
     margin: 0;
 }
 
-/* Home Section */
+/* Estilos da seção Home */
 .home {
     background: linear-gradient(135deg, #ff0000, #333333);
     padding: 3rem;
@@ -74,11 +77,14 @@ footer p {
     max-width: 1200px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
+    flex-wrap: wrap; 
 }
 
 .home .content {
     max-width: 600px;
     color: #ffffff;
+    text-align: left; 
+    flex: 1; 
 }
 
 .home h1 {
@@ -117,12 +123,11 @@ footer p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Quem Sou Eu Section */
+/* Estilos da seção Quem Sou Eu */
 .quem-sou {
     background-color: #970000;
     color: #ffffff;
     padding: 3rem;
-    text-align: left;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -130,6 +135,32 @@ footer p {
 .quem-sou h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+}
+
+.quem-sou-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap; 
+}
+
+.quem-sou .profile-image {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.quem-sou .profile-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quem-sou .quem-sou-text {
+    flex: 2;
+    text-align: left; 
 }
 
 .quem-sou p {
@@ -142,7 +173,7 @@ footer p {
     color: #ffffff;
 }
 
-/* Contatos Section */
+/* Estilos da seção Contatos */
 .contatos {
     background-color: #ffffff;
     color: #333333;
@@ -167,10 +198,12 @@ footer p {
     list-style: none;
     padding: 0;
     margin-top: 2rem;
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
 }
 
 .contatos ul li {
-    display: inline-block;
     margin: 0 15px;
 }
 
@@ -189,7 +222,7 @@ footer p {
     color: #ffffff;
 }
 
-/* Serviços Section */
+/* Estilos da seção Serviços */
 .servicos {
     background-color: #333333;
     color: #ffffff;
@@ -219,7 +252,32 @@ footer p {
     margin-bottom: 1rem;
 }
 
-.servicos .servico p {
+.servicos .servico-content {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; 
+}
+
+.servicos .servico-image {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center; 
+}
+
+.servicos .servico-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.servicos .servico-text {
+    flex: 2;
+}
+
+.servicos .servico-text p {
     font-size: 1.2rem;
     line-height: 1.8;
 }
@@ -258,6 +316,15 @@ footer p {
     .servicos {
         padding: 2rem;
     }
+
+    .quem-sou-content {
+        flex-direction: column;
+    }
+
+    .servicos .servico-content {
+        flex-direction: column;
+        align-items: center; 
+    }
 }
 
 @media (max-width: 576px) {
@@ -278,8 +345,17 @@ footer p {
         width: 200px;
     }
 
-    .servicos .servico img {
-        width: 80px;
-        height: 80px;
+    .servicos .servico h2 {
+        font-size: 1.5rem;
+    }
+
+    .servicos .servico p {
+        font-size: 1rem;
+    }
+
+    .servicos .servico-image img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
     }
 }
